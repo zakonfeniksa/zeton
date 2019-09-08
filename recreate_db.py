@@ -3,8 +3,8 @@ import sqlite3 as sql
 from werkzeug.security import generate_password_hash
 
 
-def create_user(username, password, firstname, role):
-    query = "insert into users (username, password, firstname, role) VALUES (?, ?, ?, ?)"
+def create_user(username, password, firstname, role, email):
+    query = "insert into users (username, password, firstname, role, email) VALUES (?, ?, ?, ?, ?)"
 
     cur = db.cursor()
     hashed_password = generate_password_hash(password)

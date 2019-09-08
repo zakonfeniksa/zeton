@@ -69,9 +69,12 @@ def task_detail(child_id):
 @auth.login_required
 def user_settings():
     logged_user_id = g.user_data['id']
+    logged_email = g.user_data['email']
     user_data = users.get_user_data(logged_user_id)
+    user_email = users.get_user_data(logged_email)
 
-    context = {'user_data': user_data}
+    context = {'user_data': user_data,
+               'user_email': user_email}
     messages = get_flashed_messages()
 
     return render_template('user_settings.html', **context, messages=messages)

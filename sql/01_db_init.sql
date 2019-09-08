@@ -17,6 +17,7 @@ create table users
   role                    text not NULL check ( role in ('caregiver', 'child') ),
   firstname               text,
   lastname                text,
+  email                   text,
   points                  integer default 0,
   last_insert_id          integer default 0,
   school_weekly_highscore integer default 0
