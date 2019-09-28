@@ -21,11 +21,11 @@ create table users
   lastname                text
 );
 
-create table main_poin
+create table main_points
 (
   id                      integer UNIQUE primary key autoincrement,
   child_id                INTEGER,
-  pointgyus                  integer default 0,
+  points                  integer default 0,
   last_insert_id          integer default 0,
   school_weekly_highscore integer default 0,
   exp                     integer default 0,
