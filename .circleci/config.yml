@@ -24,18 +24,14 @@ jobs:
     docker:
       -image: circleci/python:3.7
     steps:
-      -checkout
-      -run:
-        name: Create virtual env
-        command: python -m venv venv
-      -run:
-        name: Install requirements
-        command: |
-          . venv/bin/activate
-          python recreate_db.py
-      -run:
-        name: test
-        command: |
-          . venv/bin/activate
-          pytest -s
+      - run:
+         name: Install requirements
+         command: |
+           . venv/bin/activate
+           python recreate_db.py
+      - run:
+         name: test
+         command: |
+           . venv/bin/activate
+           pytest -s
 
