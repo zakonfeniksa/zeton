@@ -25,7 +25,7 @@ create table main_points
 (
   id                      integer UNIQUE primary key autoincrement,
   child_id                INTEGER,
-  points                  integer default 0,
+  pointgyus                  integer default 0,
   last_insert_id          integer default 0,
   school_weekly_highscore integer default 0,
   exp                     integer default 0,
