@@ -33,5 +33,6 @@ jobs:
          name: test
          command: |
            . venv/bin/activate
+           python recreate_db.py
            pytest -s
 
