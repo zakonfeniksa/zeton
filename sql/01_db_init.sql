@@ -21,7 +21,7 @@ create table users
   lastname                text
 );
 
-create table main_points
+create table main_poin
 (
   id                      integer UNIQUE primary key autoincrement,
   child_id                INTEGER,
