@@ -35,7 +35,7 @@ jobs:
           python recreate_db.py
       -run:
         name: test
-          command: |
-            . venv/bin/activate
-            pytest -s
+        command: |
+          . venv/bin/activate
+          pytest -s
 
